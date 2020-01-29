@@ -1,0 +1,10 @@
+<ion-list inset>
+  <span *ngFor="let group of groups">
+    <ion-list-header color="secondary">
+      <ion-label class="letterRanking">{{ group.letter }}</ion-label>
+    </ion-list-header>
+    <ion-item color="success" *ngFor="let item of group.ordered_teams"
+      >{{ item.country }} - {{ item.points }}
+    </ion-item>
+  </span>
+</ion-list>
